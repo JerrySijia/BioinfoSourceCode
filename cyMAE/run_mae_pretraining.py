@@ -177,7 +177,7 @@ def main(args):
         shuffle=False,
         collate_fn=dataset_train.custom_collate_fn
     )
-    
+
     model.to(device)
     model_without_ddp = model
     n_parameters = sum(p.numel() for p in model.parameters() if p.requires_grad)
